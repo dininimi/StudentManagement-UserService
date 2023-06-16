@@ -21,4 +21,8 @@ public class StudentService {
 
         return  studentRepository.save(s);
     }
+
+    public Student getStudentById(int id) {
+        return studentRepository.findById(id).orElse(null);
+    }
 }

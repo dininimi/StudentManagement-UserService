@@ -23,6 +23,11 @@ public class StudentController {
     public List<Student> getAllStudents(){
         return studentService.getAllStudents();
     }
+    @GetMapping(path = "/students/{id}")
+    public Student getStudentById(@PathVariable int id){
+
+        return studentService.getStudentById(id);
+    }
 
     @PostMapping(path="/students")
     public Student saveStudent(@RequestBody Student s){
